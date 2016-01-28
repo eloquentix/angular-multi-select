@@ -1078,7 +1078,7 @@ angular.module( 'isteven-multi-select', ['ng', 'vs-repeat'] ).directive( 'isteve
                     '</div> '+
                 '</div> '+
                 // selection items
-                '<div class="checkBoxContainer" vs-repeat>'+
+                '<div class="checkBoxContainer" vs-repeat vs-scroll-parent=".dropdown-menu">'+
                     '<div '+
                         'ng-repeat="item in filteredModel | filter:removeGroupEndMarker" class="multiSelectItem"'+
                         'ng-class="{selected: item[ tickProperty ], horizontal: orientationH, vertical: orientationV, multiSelectGroup:item[ groupProperty ], disabled:itemIsDisabled( item )}"'+
