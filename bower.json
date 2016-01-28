@@ -5,6 +5,9 @@
         "isteven-multi-select.js",
         "isteven-multi-select.css"
     ],
+    "dependencies": {
+        "angular-vs-repeat": "~1.1.4"
+    },
     "ignore"    : [
         ".git",
         ".gitignore",
