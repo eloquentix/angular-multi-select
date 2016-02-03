@@ -436,16 +436,14 @@ angular.module( 'isteven-multi-select', ['ng', 'vs-repeat'] ).directive( 'isteve
                 }                                  
 
                 // we execute the callback function here
-                clickedItem = angular.copy( item );                                                    
-                if ( clickedItem !== null ) {                        
-                    $timeout( function() {
-                        delete clickedItem[ $scope.indexProperty ];
-                        delete clickedItem[ $scope.spacingProperty ];      
-                        $scope.onItemClick( { data: clickedItem } );
-                        clickedItem = null;                    
-                    }, 0 );                                                 
-                }                                    
-                
+                clickedItem = JSON.parse( JSON.stringify(item) );
+                if ( clickedItem !== null ) {
+                    delete clickedItem[ $scope.indexProperty ];
+                    delete clickedItem[ $scope.spacingProperty ];
+                    $scope.onItemClick( { data: clickedItem } );
+                    clickedItem = null;
+                }
+
                 $scope.refreshOutputModel();
                 $scope.refreshButton();                              
 
